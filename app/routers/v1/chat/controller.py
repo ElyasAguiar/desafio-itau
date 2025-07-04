@@ -39,9 +39,19 @@ class ChatRoute:
             timestamp=now.isoformat(),
         )
 
+        # Salvar no MongoDB
+        chat_data = chat_response.model_dump()
+        await self.service.save_chat(chat_data)
+
         # Retorna resposta
         return chat_response
 
     @router.get("/health")
     async def health_check(self):
         return {"status": "ok"}
+
+    @router.get("/chats/{user_id}", response_model=list[ChatResponse])
+    async def get_user_chats(self, user_id: str):
+        """Get all chats for a specific user."""
+        chats = await self.service.db_service.get_chats_by_user(user_id)
+        return chats

@@ -57,6 +57,9 @@ class AppConfig(BaseSettings):
     REDIS_PORT: str = ""
     REDIS_PASSWORD: str = ""
 
+    # MongoDB
+    MONGODB_URL: str = "mongodb://mongo:27017"
+
     # OPENAI Model
     OPENAI_API_KEY: str = ""
 
