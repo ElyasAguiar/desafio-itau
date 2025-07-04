@@ -11,10 +11,12 @@ dependencies = [
     "fastapi-utils>=0.8.0",
     "httpx>=0.28.1",
     "loguru>=0.7.3",
+    "loki-logger-handler>=1.1.2",
     "openai>=1.93.0",
     "prometheus-fastapi-instrumentator>=7.1.0",
     "pydantic>=2.11.7",
     "pydantic-settings>=2.10.1",
+    "requests>=2.32.4",
     "typing-inspect>=0.9.0",
     "uvicorn>=0.35.0",
 ]

@@ -1,15 +1,18 @@
-version: "3.8"
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "${PORT}:${PORT}"
     environment:
       - MONGODB_URL=mongodb://mongo:27017
       - REDIS_URL=redis://redis:6379
     depends_on:
       - mongo
       - redis
+    networks:
+      - monitoring
 
   mongo:
     image: mongo:7
@@ -17,18 +20,24 @@ services:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
+    networks:
+      - monitoring
 
   redis:
     image: redis:7-alpine
     ports:
       - "6379:6379"
+    networks:
+      - monitoring
 
   prometheus:
     image: prom/prometheus
     ports:
       - "9090:9090"
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - monitoring
 
   grafana:
     image: grafana/grafana
@@ -36,6 +45,29 @@ services:
       - "3000:3000"
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_USER=admin
+    volumes:
+      - ./docker/grafana/provisioning:/etc/grafana/provisioning
+    depends_on:
+      - prometheus
+    networks:
+      - monitoring
+    env_file:
+      - .env
+
+  loki:
+    image: grafana/loki
+    command: -config.file=/etc/loki/local-config.yaml
+    ports:
+      - "3100:3100"
+    networks:
+      - monitoring
+    # logging: *default-logging
 
 volumes:
   mongo_data:
+  grafana_data:
+
+networks:
+  monitoring:
+    driver: bridge

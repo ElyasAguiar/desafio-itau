@@ -60,6 +60,9 @@ class AppConfig(BaseSettings):
     # OPENAI Model
     OPENAI_API_KEY: str = ""
 
+    # LOKI
+    LOKI_URL: str = ""
+
 
 # Initialize configuration settings
 settings = AppConfig()

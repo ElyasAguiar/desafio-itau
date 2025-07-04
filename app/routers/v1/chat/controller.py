@@ -41,3 +41,7 @@ class ChatRoute:
 
         # Retorna resposta
         return chat_response
+
+    @router.get("/health")
+    async def health_check(self):
+        return {"status": "ok"}
