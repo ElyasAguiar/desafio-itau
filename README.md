@@ -29,7 +29,6 @@ A versão implementada representa um **MVP robusto** (entre V1 e V2), ideal para
 - **Framework**: FastAPI com Python 3.10+
 - **Funcionalidades**:
   - Chat inteligente com múltiplos provedores de IA
-  - Sistema de autenticação com Bearer Token
   - Rate limiting para controle de uso
   - Health checks e métricas
   - Documentação automática (Swagger)
