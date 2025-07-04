@@ -259,18 +259,6 @@ docker-compose up --build -d
 
 ---
 
-## 🎨 Comparação Visual das Arquiteturas
-
-### Evolução Completa: Do MVP ao Mission Critical
-
-| **V1: MVP Simples** | **V2: Escalável** |
-|:---:|:---:|
-| ![V1](assets/v1.svg) | ![V2](assets/v2.svg) |
-| **V3: Empresarial** | **V4: Mission Critical** |
-| ![V3](assets/v3.svg) | ![V4](assets/v4.svg) |
-
----
-
 ## 📚 Recursos Adicionais
 
 - **Métricas**: `/metrics` (Prometheus)
