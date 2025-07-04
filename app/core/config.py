@@ -56,6 +56,15 @@ class AppConfig(BaseSettings):
     REDIS_HOST: str = ""
     REDIS_PORT: str = ""
     REDIS_PASSWORD: str = ""
+    REDIS_URL: str = "redis://redis:6379"
+
+    # Cache settings
+    CACHE_TTL: int = 3600  # 1 hora
+    SESSION_TTL: int = 7200  # 2 horas
+
+    # Rate limiting
+    RATE_LIMIT_REQUESTS: int = 10
+    RATE_LIMIT_WINDOW: int = 60  # 1 minuto
 
     # MongoDB
     MONGODB_URL: str = "mongodb://mongo:27017"
