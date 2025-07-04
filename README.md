@@ -25,7 +25,7 @@ docker-compose up --build -d
 ### 📱 **Fase 1: MVP Simples**
 > *"Vamos validar se nossa ideia funciona"*
 
-![Arquitetura V1 - MVP Simples](assets/v1.svg)
+![Arquitetura V1 - MVP Simples](assets/v1.png)
 
 **🎯 Objetivo:** Colocar algo no ar rapidamente e com baixo custo
 
@@ -59,7 +59,7 @@ docker-compose up --build -d
 ### 🚀 **Fase 2: Escalável**
 > *"Temos usuários! Precisamos aguentar o crescimento"*
 
-![Arquitetura V2 - Escalável](assets/v2.svg)
+![Arquitetura V2 - Escalável](assets/v2.png)
 
 **🎯 Objetivo:** Crescer sem quebrar, mas ainda controlando custos
 
@@ -90,7 +90,7 @@ docker-compose up --build -d
 ### 🏢 **Fase 3: Empresarial**
 > *"Agora é sério. Precisamos de 99.9% de disponibilidade"*
 
-![Arquitetura V3 - Empresarial](assets/v3.svg)
+![Arquitetura V3 - Empresarial](assets/v3.png)
 
 **🎯 Objetivo:** Produção empresarial com monitoramento completo
 
@@ -121,7 +121,7 @@ docker-compose up --build -d
 ### 🛡️ **Fase 4: Mission Critical**
 > *"Cada minuto offline custa milhares. Zero tolerância a falhas"*
 
-![Arquitetura V4 - Mission Critical](assets/v4.svg)
+![Arquitetura V4 - Mission Critical](assets/v4.png)
 
 **🎯 Objetivo:** Máxima disponibilidade com redundância global
 
