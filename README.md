@@ -38,7 +38,7 @@ A versão implementada representa um **MVP robusto** (entre V1 e V2), ideal para
 - **Redis (Porta 6379)**: Cache em memória para:
   - Sessions de usuários
   - Cache de respostas frequentes
-  - Rate limiting
+  - Rate limiting (não finalizado)
 
 #### **🤖 Provedores de IA**
 - **OpenAI/Claude**: Integração com múltiplos provedores
