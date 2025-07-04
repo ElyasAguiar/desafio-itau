@@ -12,7 +12,7 @@ class OpenAIClient:
     ):
         self.api_key = api_key
         self.model = model
-        self.client = AsyncOpenAI(api_key=self.api_key)
+        self.client = AsyncOpenAI(api_key=self.api_key, max_retries=3)
         self.cache = CacheService()
         self.circuit_breaker = CircuitBreaker("openai_api")
 
