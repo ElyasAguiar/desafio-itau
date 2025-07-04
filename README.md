@@ -64,7 +64,7 @@ app/
 ### 🔑 **Principais Características**
 
 #### **✅ Funcionalidades Implementadas:**
-- 🎯 **Chat Inteligente**: Conversas com IA mantendo contexto
+- 🎯 **Chat Inteligente**: Conversas com IA
 - ⚡ **Rate Limiting**: Controle de uso por usuário
 - 🏥 **Health Checks**: Monitoramento de saúde dos serviços
 - 📈 **Métricas**: Observabilidade completa com Prometheus/Grafana
